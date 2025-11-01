@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro Completo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>📝 Registro de Usuario</h1>
+            <p>Complete el formulario con sus datos</p>
+        </div>
+
+        <form id="registrationForm" action="/submit-form" method="post">
+            
+            <!-- Nombre Completo -->
+            <div class="form-group">
+                <label for="fullName">Nombre Completo: *</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Ej: Juan Pérez">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email: *</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            </div>
+
+            <!-- Contraseña -->
+            <div class="form-group">
+                <label for="password">Contraseña: *</label>
+                <input type="password" id="password" name="password" pattern=".{8,}" 
+                       title="Debe contener al menos 8 caracteres" required 
+                       placeholder="Mínimo 8 caracteres">
+                <small class="help-text">Debe contener al menos 8 caracteres</small>
+            </div>
+
+            <!-- Fecha de Nacimiento -->
+            <div class="form-group">
+                <label for="dob">Fecha de Nacimiento:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <!-- País (Select) -->
+            <div class="form-group">
+                <label for="country">País: *</label>
+                <select id="country" name="country" required>
+                    <option value="">Seleccione...</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="mexico">México</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="españa">España</option>
+                    <option value="usa">Estados Unidos</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <!-- Género (Radio Buttons) -->
+            <div class="form-group">
+                <label class="group-label">Género: *</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Masculino</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Femenino</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        <label for="other">Otro</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intereses (Checkboxes) -->
+            <div class="form-group">
+                <label class="group-label">Intereses:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="coding" name="interests" value="coding">
+                        <label for="coding">Programación</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="music" name="interests" value="music">
+                        <label for="music">Música</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sports" name="interests" value="sports">
+                        <label for="sports">Deportes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="reading" name="interests" value="reading">
+                        <label for="reading">Lectura</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="travel" name="interests" value="travel">
+                        <label for="travel">Viajes</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Términos y Condiciones -->
+            <div class="form-group">
+                <div class="checkbox-item terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Acepto los Términos y Condiciones *</label>
+                </div>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="submit-btn">Registrarse</button>
+
+            <p class="required-note">* Campos obligatorios</p>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

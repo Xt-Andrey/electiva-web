@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Profesional - Andrey Galvis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Andrey Galvis</h1>
+            <p class="subtitle">INGENIERO DE SISTEMAS</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('about')">Sobre Mí</button>
+            <button class="tab" onclick="showSection('projects')">Proyectos</button>
+            <button class="tab" onclick="showSection('skills')">Habilidades</button>
+            <button class="tab" onclick="showSection('contact')">Contacto</button>
+        </div>
+
+        <div class="content">
+            <!-- Sección Sobre Mí -->
+            <div id="about" class="section active">
+                <h2 style="color: #667eea; margin-bottom: 20px;">¡Hola! 👋</h2>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 15px;">
+                    Soy un estudiante de ingeniería de Sistemas apasionado por crear experiencias digitales intuitivas y funcionales.
+                    Me encanta trabajar en proyectos que me permitan aprender y desarrollar habilidades en el desarrollo web.
+                </p>
+                <p style="font-size: 1.1em; line-height: 1.8;">
+                    Mi objetivo es construir aplicaciones web que no solo se vean bien, sino que también 
+                    proporcionen una experiencia de usuario excepcional con validaciones robustas y 
+                    diseño responsivo.
+                </p>
+            </div>
+
+            <!-- Sección Proyectos -->
+            <div id="projects" class="section">
+                <h2 style="color: #667eea; margin-bottom: 30px;">Proyectos Destacados</h2>
+                
+                <div class="project-card">
+                    <h3 class="project-title">🎯 Sistema de Registro Completo</h3>
+                    <p style="margin: 15px 0; line-height: 1.6;">
+                        Formulario de registro comprehensivo con múltiples tipos de inputs y validación 
+                        en tiempo real tanto del lado del cliente como del servidor.
+                    </p>
+                    
+                    <div class="tech-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Validación</span>
+                    </div>
+
+                    <div class="features">
+                        <div class="feature">
+                            <strong>✓ Inputs variados:</strong> Texto, email, contraseña, fecha, select, radio buttons y checkboxes
+                        </div>
+                        <div class="feature">
+                            <strong>✓ Validación de contraseña:</strong> Requiere mínimo 8 caracteres con patrón personalizado
+                        </div>
+                        <div class="feature">
+                            <strong>✓ Validación client-side:</strong> JavaScript previene envíos incorrectos con feedback inmediato
+                        </div>
+                        <div class="feature">
+                            <strong>✓ UX optimizada:</strong> Labels claros, campos requeridos y mensajes de error útiles
+                        </div>
+                        <div class="feature">
+                            <strong>✓ Accesibilidad:</strong> Estructura semántica con atributos ARIA apropiados
+                        </div>
+                    </div>
+
+                    <a href="#" class="demo-link">Ver Demo en CodeSandbox →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">⚡ Formulario Dinámico Interactivo</h3>
+                    <p style="margin: 15px 0; line-height: 1.6;">
+                        Formulario inteligente que se adapta en tiempo real según las selecciones del usuario, 
+                        mostrando campos relevantes dinámicamente sin recargar la página.
+                    </p>
+                    
+                    <div class="tech-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">DOM Manipulation</span>
+                        <span class="tag">Event Listeners</span>
+                        <span class="tag">UX Dinámico</span>
+                    </div>
+
+                    <div class="features">
+                        <div class="feature">
+                            <strong>✓ Interacción en tiempo real:</strong> Los campos cambian instantáneamente según la selección del usuario
+                        </div>
+                        <div class="feature">
+                            <strong>✓ Renderizado condicional:</strong> Muestra campos específicos (Autor para Libros, Director para Películas)
+                        </div>
+                        <div class="feature">
+                            <strong>✓ Event Listeners:</strong> Detecta cambios en el dropdown y actualiza el formulario automáticamente
+                        </div>
+                        <div class="feature">
+                            <strong>✓ Manipulación del DOM:</strong> Usa innerHTML para crear y eliminar campos dinámicamente
+                        </div>
+                        <div class="feature">
+                            <strong>✓ Sin recarga de página:</strong> Toda la interacción sucede en el navegador para una UX fluida
+                        </div>
+                    </div>
+
+                    <a href="#" class="demo-link">Ver Demo en CodeSandbox →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">🛒 Tienda Digital</h3>
+                    <p style="margin: 15px 0; line-height: 1.6;">
+                        Aplicación de comercio electrónico con catálogo de productos, carrito de compras y 
+                        procesamiento de pagos simulado.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tag">Facturas Electrónicas</span>
+                        <span class="tag">Base de Datos</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Habilidades -->
+            <div id="skills" class="section">
+                <h2 style="color: #667eea; margin-bottom: 30px;">Habilidades Técnicas</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Frontend</h3>
+                        <p>HTML5, CSS3, JavaScript, Validación de Formularios, UX/UI</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Backend</h3>
+                        <p>Procesamiento de Formularios, APIs</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Herramientas</h3>
+                        <p>Git, GitHub, Java, Laravel</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Soft Skills</h3>
+                        <p>Documentación, Atención al Detalle</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección Contacto -->
+            <div id="contact" class="section">
+                <h2 style="color: #667eea; margin-bottom: 30px;">¡Trabajemos Juntos!</h2>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 30px;">
+                    Estoy disponible para proyectos freelance y oportunidades de colaboración. 
+                    ¿Tienes un proyecto en mente? ¡Hablemos!
+                </p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>📧 Email</strong>
+                        <p>andreygalvis6002@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>🐙 GitHub</strong>
+                        <p>github.com/Xt-andrey</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>📱 Teléfono</strong>
+                        <p>+57 310 2402810</p>
+                    </div>
+                </div> 
+
+              <div style="text-align: center;">
+                <a href="https://www.canva.com/design/DAGhWK3PV4c/hwgvDiixGkitGJsIJmkTPQ/edit?utm_content=DAGhWK3PV4c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="cta-button">
+                  <span class="elastic">Ver mi CV</span>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

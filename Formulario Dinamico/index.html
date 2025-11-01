@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Dinámico Interactivo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>⚡ Formulario Dinámico</h1>
+            <p>Los campos cambian según tu selección</p>
+        </div>
+
+        <form id="dynamicForm">
+            
+            <!-- Selector de Categoría -->
+            <div class="form-group">
+                <label for="choice">Elige una Categoría: *</label>
+                <select id="choice" name="choice" required>
+                    <option value="">Selecciona una opción...</option>
+                    <option value="books">📚 Libros</option>
+                    <option value="movies">🎬 Películas</option>
+                    <option value="music">🎵 Música</option>
+                    <option value="games">🎮 Videojuegos</option>
+                </select>
+            </div>
+
+            <!-- Contenedor para campos dinámicos -->
+            <div id="additionalFields" class="dynamic-container">
+                <div class="placeholder">
+                    <p>👆 Selecciona una categoría para ver más campos</p>
+                </div>
+            </div>
+
+            <!-- Botón de envío (oculto inicialmente) -->
+            <button type="submit" class="submit-btn" id="submitBtn" style="display: none;">
+                Enviar Formulario
+            </button>
+        </form>
+
+        <!-- Área de resultados -->
+        <div id="results" class="results-container" style="display: none;">
+            <h3>📋 Datos Enviados:</h3>
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
