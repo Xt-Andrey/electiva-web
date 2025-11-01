@@ -2,19 +2,16 @@ document.getElementById("choice").addEventListener("change", function() {
     const value = this.value;
     const additionalFields = document.getElementById("additionalFields");
     const submitBtn = document.getElementById("submitBtn");
-    
-    // Limpiar campos existentes
+
     additionalFields.innerHTML = "";
-    
-    // Si no hay selección, mostrar placeholder
+   
     if (value === "") {
         additionalFields.classList.remove("active");
         additionalFields.innerHTML = '<div class="placeholder"><p>👆 Selecciona una categoría para ver más campos</p></div>';
         submitBtn.style.display = "none";
         return;
     }
-    
-    // Activar el contenedor
+
     additionalFields.classList.add("active");
     submitBtn.style.display = "block";
     
